@@ -1,11 +1,6 @@
-/* ============================================
-   RIVERWALK MEDICAL CENTRE - JAVASCRIPT
-   Form handling with professional validation
-   ============================================ */
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Toast notification function
     function showMessage(message, isSuccess = true) {
         const toast = document.createElement('div');
         
@@ -40,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 4000);
     }
 
-    // Add animation styles
     const style = document.createElement('style');
     style.textContent = `
         @keyframes slideIn {
@@ -54,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
 
-    // Newsletter Form
     const newsletterForm = document.getElementById('newsletterForm');
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', function(e) {
@@ -70,7 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Test Results Form
     const resultsForm = document.getElementById('resultsForm');
     if (resultsForm) {
         resultsForm.addEventListener('submit', function(e) {
@@ -87,7 +79,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Prescription Form
     const prescriptionForm = document.getElementById('prescriptionForm');
     if (prescriptionForm) {
         prescriptionForm.addEventListener('submit', function(e) {
@@ -103,7 +94,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Registration Form - Full validation
     const registerForm = document.getElementById('registerForm');
     if (registerForm) {
         registerForm.addEventListener('submit', function(e) {
@@ -138,7 +128,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const target = document.querySelector(this.getAttribute('href'));
