@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Hub | Riverwalk Medical Centre</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="592079887_1321707923304031_1038396307956701715_n.jpg" alt="Riverwalk Medical Centre Logo" width="50" height="50">
+                <span>Riverwalk <span class="brand-accent">Medical</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="patient-hub.html">Patient Hub</a></li>
+                </ul>
+                <a href="#" class="btn-appointment" onclick="alert('Connecting to booking system...')">Book Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Patient <span class="gradient-text">Hub</span></h1>
+            <p>24/7 access to appointments, prescriptions, results, and registration</p>
+        </div>
+    </section>
+
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- Left Column -->
+            <div class="col-lg-6">
+                <!-- Book Appointment -->
+                <div class="hub-card">
+                    <i class="fas fa-calendar-plus"></i>
+                    <h3>Book an Appointment</h3>
+                    <p>See real-time availability of our GPs and book instantly.</p>
+                    <button class="hub-btn" onclick="alert('Connecting to HotDoc booking system...')">Book Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+                
+                <!-- Request Test Results Form -->
+                <div class="hub-card">
+                    <i class="fas fa-flask"></i>
+                    <h3>Request Test Results</h3>
+                    <form id="resultsForm">
+                        <input type="text" class="form-control mb-2" placeholder="Full Name" required>
+                        <input type="email" class="form-control mb-2" placeholder="Email Address" required>
+                        <input type="text" class="form-control mb-2" placeholder="Date of Test" required>
+                        <button type="submit" class="hub-submit">Request Results</button>
+                    </form>
+                </div>
+                
+                <!-- Prescription Refill Form -->
+                <div class="hub-card">
+                    <i class="fas fa-prescription-bottle"></i>
+                    <h3>Prescription Refill</h3>
+                    <form id="prescriptionForm">
+                        <input type="text" class="form-control mb-2" placeholder="Full Name" required>
+                        <input type="text" class="form-control mb-2" placeholder="Medication Name" required>
+                        <input type="text" class="form-control mb-2" placeholder="Preferred Pharmacy Name" required>
+                        <button type="submit" class="hub-submit">Request Refill</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Right Column - Registration Form -->
+            <div class="col-lg-6">
+                <div class="hub-card registration-card">
+                    <i class="fas fa-user-plus"></i>
+                    <h3>New Patient Registration</h3>
+                    <p>Join our practice today. All fields are required.</p>
+                    <form id="registerForm">
+                        <input type="text" class="form-control mb-2" placeholder="Full Legal Name" required>
+                        <input type="date" class="form-control mb-2" placeholder="Date of Birth" required>
+                        <input type="email" class="form-control mb-2" placeholder="Email Address" required>
+                        <input type="tel" class="form-control mb-2" placeholder="Mobile Number" required>
+                        <input type="text" class="form-control mb-2" placeholder="Residential Address" required>
+                        <select class="form-control mb-2" required>
+                            <option value="">Select Medical aid Card</option>
+                            <option>Bomaid</option>
+                            <option>BPOMAS</option>
+                            <option>Discovery Health</option>
+                        </select>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="privacyCheck" required>
+                            <label class="form-check-label">I confirm the information is correct and consent to the privacy policy</label>
+                        </div>
+                        <button type="submit" class="hub-submit primary">Register Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Resources Section -->
+        <div class="resources-section mt-5">
+            <div class="row">
+                <div class="col-12">
+                    <h3><i class="fas fa-newspaper"></i> Health Resources</h3>
+                </div>
+            </div>
+            <div class="row g-3 mt-2">
+                <div class="col-md-4">
+                    <div class="resource-item">
+                        <i class="fas fa-dollar-sign"></i>
+                        <strong>Fees & Billing</strong>
+                        <p>Bulk billing for children under 16 and concession card holders. Private consultation: P80 standard fee.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="resource-item">
+                        <i class="fas fa-blog"></i>
+                        <strong>Health Blog</strong>
+                        <p>Read our latest article: "Winter Immunization Guide 2026" - Essential vaccines for the family.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="resource-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <strong>After Hours Care</strong>
+                        <p>Call (+267) 77 176 223 for our locum service after hours. Available 24/7 for urgent care.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Riverwalk Medical Centre. Your Health, Our Passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Main.js"></script>
+</body>
+</html>
