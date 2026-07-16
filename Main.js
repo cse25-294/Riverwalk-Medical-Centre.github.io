@@ -1,6 +1,11 @@
+/* ============================================
+   RIVERWALK MEDICAL CENTRE - JAVASCRIPT
+   Form handling with professional validation
+   ============================================ */
 
 document.addEventListener('DOMContentLoaded', function() {
     
+    // Toast notification function
     function showMessage(message, isSuccess = true) {
         const toast = document.createElement('div');
         
@@ -35,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 4000);
     }
 
+    // Add animation styles
     const style = document.createElement('style');
     style.textContent = `
         @keyframes slideIn {
@@ -48,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
 
+    // Newsletter Form
     const newsletterForm = document.getElementById('newsletterForm');
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', function(e) {
@@ -63,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Test Results Form
     const resultsForm = document.getElementById('resultsForm');
     if (resultsForm) {
         resultsForm.addEventListener('submit', function(e) {
@@ -79,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Prescription Form
     const prescriptionForm = document.getElementById('prescriptionForm');
     if (prescriptionForm) {
         prescriptionForm.addEventListener('submit', function(e) {
@@ -94,6 +103,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Feedback Form
+    const feedbackForm = document.getElementById('feedbackForm');
+    if (feedbackForm) {
+        feedbackForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = this.querySelector('input[placeholder="Full Name"]').value;
+            const email = this.querySelector('input[type="email"]').value;
+
+            if (name && email && email.includes('@')) {
+                showMessage(`Thank you, ${name}! Your feedback has been submitted.`, true);
+                this.reset();
+            } else {
+                showMessage('Please complete all required fields', false);
+            }
+        });
+    }
+
+    // Registration Form - Full validation
     const registerForm = document.getElementById('registerForm');
     if (registerForm) {
         registerForm.addEventListener('submit', function(e) {
@@ -128,6 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const target = document.querySelector(this.getAttribute('href'));

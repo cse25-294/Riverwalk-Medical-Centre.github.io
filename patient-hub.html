@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patient Hub | Riverwalk Medical Centre</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -26,6 +26,7 @@
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link active" href="patient-hub.html">Patient Hub</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
                 </ul>
                 <a href="#" class="btn-appointment" onclick="alert('Connecting to booking system...')">Book Appointment</a>
             </div>
@@ -41,7 +42,9 @@
 
     <div class="container py-5">
         <div class="row g-4">
+            <!-- Left Column -->
             <div class="col-lg-6">
+                <!-- Book Appointment -->
                 <div class="hub-card">
                     <i class="fas fa-calendar-plus"></i>
                     <h3>Book an Appointment</h3>
@@ -49,6 +52,7 @@
                     <button class="hub-btn" onclick="alert('Connecting to HotDoc booking system...')">Book Now <i class="fas fa-arrow-right"></i></button>
                 </div>
                 
+                <!-- Request Test Results Form -->
                 <div class="hub-card">
                     <i class="fas fa-flask"></i>
                     <h3>Request Test Results</h3>
@@ -59,7 +63,8 @@
                         <button type="submit" class="hub-submit">Request Results</button>
                     </form>
                 </div>
-  
+                
+                <!-- Prescription Refill Form -->
                 <div class="hub-card">
                     <i class="fas fa-prescription-bottle"></i>
                     <h3>Prescription Refill</h3>
@@ -71,7 +76,8 @@
                     </form>
                 </div>
             </div>
-
+            
+            <!-- Right Column - Registration Form -->
             <div class="col-lg-6">
                 <div class="hub-card registration-card">
                     <i class="fas fa-user-plus"></i>
@@ -98,7 +104,8 @@
                 </div>
             </div>
         </div>
-
+        
+        <!-- Resources Section -->
         <div class="resources-section mt-5">
             <div class="row">
                 <div class="col-12">
@@ -139,7 +146,7 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="Main.js"></script>
 </body>
 </html>
